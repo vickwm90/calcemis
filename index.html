@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VickWM Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <script>
+        // Prevent flash of white in dark mode - runs before CSS/page render
+        if (localStorage.getItem('daynight-theme') === 'carbon') {
+            document.documentElement.classList.add('carbon');
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/indx.css">
+    <link rel="stylesheet" media="print" href="./css/print.css" />
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 465 467"><g id="Capa_2"><circle id="Circulo" cx="232.5" cy="234.5" r="232.5" class="cls-3" /></g><g id="Lobo"><g id="Head"><path class="cls-2" d="M192.2 137.7c-21.1-20.4-42.2-40.8-63.1-61.2-2.5 8.8-4.6 19.1-5.8 30.6-2.2 23.3.5 43.1 3.9 57.5l-30.6 61.2c8.3 14.6 16.6 29.4 24.8 44-1.7 3.2-4.7 7.6-9.5 11.5-2 1.6-3.9 2.9-5.8 3.9L75.5 224l30.6-59.3c-2.6-13.4-4.7-32.7-1.9-55.5 3.6-29.3 13.7-51.6 21.1-65.1 19.8 21.7 39.6 43.4 59.3 65.1 1.9 3.2 4.1 7.7 5.8 13.4 1.7 6.2 2 11.5 1.9 15.3Zm90.1 0c21.1-20.4 42.2-40.8 63.1-61.2 2.4 8.8 4.6 19.1 5.8 30.6 2.3 23.3-.5 43.1-3.9 57.5l30.6 61.2c-8.3 14.6-16.6 29.4-24.9 44 1.7 3.2 4.7 7.6 9.5 11.5 2 1.6 3.9 2.9 5.8 3.9l30.6-61.2-30.6-59.3c2.6-13.4 4.7-32.7 1.9-55.5-3.6-29.3-13.7-51.6-21.1-65.1-19.7 21.7-39.6 43.4-59.3 65.1-1.9 3.2-4.1 7.7-5.8 13.4-1.7 6.2-2 11.5-1.9 15.3ZM154.8 313.8l67 139.8c-4.6-1.3-10.8-3.5-17.2-7.7-3.9-2.5-7.1-5.2-9.5-7.7-19.8-35.7-39.6-71.4-59.3-107.2.7-2.1 1.7-4.9 3.9-7.7 5.2-6.9 12.7-9 15.3-9.5Zm168.5 0-67 139.8c4.6-1.3 10.8-3.5 17.2-7.7 3.9-2.5 7.1-5.2 9.5-7.7 19.7-35.7 39.6-71.4 59.3-107.2-.7-2.1-1.7-4.9-3.9-7.7-5.2-6.9-12.7-9-15.3-9.5ZM214.2 421l15.3 15.3c1.2-.7 2.4-1.3 3.9-1.9 2.1-.9 4-1.5 5.8-1.9v21.1c-2.7-.7-6-1.8-9.5-3.9-2.3-1.3-4.1-2.6-5.8-3.9-3.2-8.3-6.4-16.6-9.5-24.9Z"/><path class="cls-2" d="m264 421-15.3 15.3c-1.2-.7-2.4-1.3-3.9-1.9-2.1-.9-4-1.5-5.8-1.9v21.1c2.7-.7 6-1.8 9.5-3.9 2.3-1.3 4.1-2.6 5.8-3.9 3.2-8.3 6.4-16.6 9.5-24.9Z"/></g><g id="Nose"><path class="cls-2" d="M215.4 422.7c4.9 4.8 9.9 9.6 14.8 14.5 1.1-.6 2.3-1.3 3.8-1.8 2-.9 3.9-1.4 5.6-1.8v19.9c-2.6-.7-5.8-1.7-9.2-3.7-2.2-1.2-4-2.4-5.6-3.7-3.1-7.9-6.2-15.7-9.2-23.6Z"/><path class="cls-2" d="M262.6 422.7c-4.9 4.8-9.9 9.6-14.8 14.5-1.1-.6-2.3-1.3-3.8-1.8-2-.9-3.9-1.4-5.6-1.8v19.9c2.6-.7 5.8-1.7 9.2-3.7 2.2-1.2 4-2.4 5.6-3.7 3.1-7.9 6.2-15.7 9.2-23.6Z"/></g><path class="cls-2" d="M271.6 288.9c2.3-3 6.5-7.7 13.4-11.5 5.7-3.1 10.9-4.3 14.3-4.8 2.4-.2 6.3-.8 10.5-2.9 3.7-1.8 6.2-4.1 7.7-5.8 3.9-10.2 7.7-20.4 11.5-30.6-13.4 4.4-26.8 9-40.2 13.4-1.9 1-4.9 2.8-7.7 5.8-3.4 3.6-5 7.3-5.8 9.5-1.3 9-2.5 17.9-3.9 26.8h.2Zm-64.9 0c-2.3-3-6.5-7.7-13.4-11.5-5.7-3.1-10.9-4.3-14.3-4.8-2.3-.2-6.3-.8-10.5-2.9-3.7-1.8-6.2-4.1-7.6-5.8-3.9-10.2-7.6-20.4-11.5-30.6l40.2 13.4c2 1 4.9 2.8 7.6 5.8 3.4 3.6 5 7.3 5.8 9.5 1.3 9 2.5 17.9 3.9 26.8h-.2Z" id="Eyes"/></g></svg>
+                        </div>
+                        VWM
+                    </a>
+                    <div class="nav-menu">
+                        <div class="nav-item">
+                            <a href="index.html" class="nav-link active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  ><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                                Gasolinera
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a onclick="generarReporte()"  class="nav-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><title>print-20-regular</title><path fill="currentColor" d="M5 4.5A1.5 1.5 0 0 1 6.5 3h7A1.5 1.5 0 0 1 15 4.5V5h.5A2.5 2.5 0 0 1 18 7.5v5a1.5 1.5 0 0 1-1.5 1.5H15v1.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 5 15.5V14H3.5A1.5 1.5 0 0 1 2 12.5v-5A2.5 2.5 0 0 1 4.5 5H5zM6 5h8v-.5a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm-1 8v-1.5A1.5 1.5 0 0 1 6.5 10h7a1.5 1.5 0 0 1 1.5 1.5V13h1.5a.5.5 0 0 0 .5-.5v-5A1.5 1.5 0 0 0 15.5 6h-11A1.5 1.5 0 0 0 3 7.5v5a.5.5 0 0 0 .5.5zm1.5-2a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/></svg>
+                                Impresiòn
+                            </a>
+                        </div>
+                        <!--
+                        <div class="nav-item">
+                            <a href="inbox.html" class="nav-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                Gas LP
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="analytics.html" class="nav-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                                Reporte
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="settings.html" class="nav-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                                Ajustes
+                            </a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="theme-toggle">
+                        <button class="theme-btn theme-btn-snow active" onclick="setTheme('snow')" title="Snow Edition">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="12" y1="1" x2="12" y2="3"/>
+                                <line x1="12" y1="21" x2="12" y2="23"/>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                <line x1="1" y1="12" x2="3" y2="12"/>
+                                <line x1="21" y1="12" x2="23" y2="12"/>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                            </svg>
+                        </button>
+                        <button class="theme-btn theme-btn-carbon" onclick="setTheme('carbon')" title="Carbon Edition">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="user-menu">
+                        <div class="user-avatar">U</div>
+                        <span class="user-name">Usuario</span>
+                    </button>
+                    <a href="#" class="btn-logout" title="Logout">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                            <polyline points="16 17 21 12 16 7"/>
+                            <line x1="21" y1="12" x2="9" y2="12"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="worksheet" id="Superior" >
+            <!-- Datos de captura -->
+            <div class="section-inner" >
+                <div class="section-header">
+                    <p class="section-title" >Estimación de emisiones</p>
+                    <h2 class="section-intro" >Estimación de emisiones derivado de la actividad de despacho de gasolina</h2>
+                    <p class="section-descrip">Descarga de combustibles, almacenamiento y despacho de gasolinas</p>
+
+                </div>
+                <div class="section-body">
+                    <p class="section-descrip" >Datos de la empresa</p>
+                    <div class="comb-textarea" >
+                        <textarea id="cmb-txt-dat" name="cmb-txt-dat" class="ocultarObj" onblur="rmvrCaracteres('cmb-txt-dat', 'cmb-lbl-dat')" onfocus="('')" ></textarea>
+                        <p id="cmb-lbl-dat" class="etiq-oculta" ></p>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <p class="section-descrip" id="lblCapturar" >Capture las ventas del período</p>
+                    <div class="comb-valrs">
+                        <div class="comb-input" >
+                            <div class="comb-chip chip-magna" >Magna</div>
+                            <label for="cmb-inp-mgn">Ventas
+                                <input type="text" id="cmb-inp-mgn" name="cmb-inp-mgn" class="ocultarObj" onblur="updateInputFuel('mgn')" onfocus="soloNumerosFocus('mgn')" >
+                                <p id="cmb-lbl-mgn" class="etiq-oculta" ></p>
+                                <span>Litros</span>
+                            </label>
+                            <div class="ecef-note ocultarObj" >Solo valores enteros</div>
+                        </div>
+                        <div class="comb-input" >
+                            <div class="comb-chip chip-premium" >Premium</div>
+                            <label for="cmb-inp-prm">Ventas
+                                <input type="text" id="cmb-inp-prm" name="cmb-inp-prm" class="ocultarObj" onblur="updateInputFuel('prm')" onfocus="soloNumerosFocus('prm')" >
+                                <p id="cmb-lbl-prm" class="etiq-oculta" ></p>
+                                <span>Litros</span>
+                            </label>
+                            <div class="ecef-note ocultarObj" >Solo valores enteros</div>
+                        </div>
+                        <div class="comb-input" >
+                            <div class="comb-chip chip-diesel" >Diésel</div>
+                            <label for="cmb-inp-dsl">Ventas
+                                <input type="text" id="cmb-inp-dsl" name="cmb-inp-dsl" class="ocultarObj" onblur="updateInputFuel('dsl')" onfocus="soloNumerosFocus('dsl')" >
+                                <p id="cmb-lbl-dsl" class="etiq-oculta" ></p>
+                                <span>Litros</span>
+                            </label>
+                            <div class="ecef-note ocultarObj" >Solo valores enteros</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resultados de cálculos generales de los combustibles -->
+            <div class="table-section">
+                <div class="elgnt-tbl">
+                    <table>
+                        <caption>
+                            Volumen de Ventas de Combustibles
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th rowspan="2" >Tipo de combustible</th>
+                                <th colspan="2">Volumen de Ventas (VV)</th>
+                                <th colspan="2">Densidad de combustible (DC)</th>
+                                <th colspan="2">Peso del volumen de ventas (PVV<sub>kg</sub>)</th>
+                                <th colspan="2">Peso del volumen de ventas (PVV<sub>ton</sub>)</th>
+                            </tr>
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>Unidad</th>
+                                <th>Cantidad</th>
+                                <th>Unidad</th>
+                                <th>Cantidad</th>
+                                <th>Unidad</th>
+                                <th>Cantidad</th>
+                                <th>Unidad</th>
+                            </tr>
+                        </thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="Combustible" ><span class="magnac" style="color: var(--magna)" >Magna</span></td>
+                                <td data-title="Cantidad (Volumen de ventas)" ><span id="val-spa-mgn"></span></td>
+                                <td data-title="Unidad (Volumen)" >m³</td>
+                                <td data-title="Densidad del combustible" ><span id="densidad-mgn">740</span></td>
+                                <td data-title="Unidad" >kg/m³</td>
+                                <td data-title="Peso del volumen de ventas" ><span id="masa-mgn" ></span></td>
+                                <td data-title="Unidad" >kg</td>
+                                <td data-title="Peso del volumen de ventas" ><span id="peso-mgn" ></span></td>
+                                <td data-title="Unidad" >ton</td>
+                            </tr>
+                            <tr>
+                                <td data-title="Combustible" ><span class="premiumc" style="color: var(--premium)" >Premium</span></td>
+                                <td data-title="Cantidad (Volumen de ventas)" ><span id="val-spa-prm"></span></td>
+                                <td data-title="Unidad (Volumen)" >m³</td>
+                                <td data-title="Densidad del combustible" ><span id="densidad-prm">730</span></td>
+                                <td data-title="Unidad" >kg/m³</td>
+                                <td data-title="Peso del volumen de ventas" ><span id="masa-prm" ></span></td>
+                                <td data-title="Unidad" >kg</td>
+                                <td data-title="Peso del volumen de ventas" ><span id="peso-prm" ></span></td>
+                                <td data-title="Unidad" >ton</td>
+                            </tr>
+                            <tr>
+                                <td data-title="Combustible" ><span class="dieselc"  style="color: var(--diesel)" >Diésel</span></td>
+                                <td data-title="Cantidad (Volumen de ventas)" ><span id="val-spa-dsl"></span></td>
+                                <td data-title="Unidad (Volumen)" >m³</td>
+                                <td data-title="Densidad del combustible" ><span id="densidad-dsl">840</span></td>
+                                <td data-title="Unidad" >kg/m³</td>
+                                <td data-title="Peso del volumen de ventas" ><span id="masa-dsl" ></span></td>
+                                <td data-title="Unidad" >kg</td>
+                                <td data-title="Peso del volumen de ventas" ><span id="peso-dsl" ></span></td>
+                                <td data-title="Unidad" >ton</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td colspan="2" >VV<sub>m<sup>3</sup></sub> = VV × ( m<sup>3</sup> <em>/</em> 1000 L )</td>
+                                <td colspan="2" ></td>
+                                <td colspan="2" >PVV<sub>kg</sub> = VV<sub>m<sup>3</sup></sub> × DC<sub>kg/m³</sub> </td>
+                                <td colspan="2" >PVV<sub>ton</sub> = PVV<sub>kg</sub> × ( (1 ton) / (1000 kg) )</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Composición de sustancias RETC en el combustible -->
+            <div class="comp-sect" id="composicion">
+                <div class="cmps-inner">
+                    <div class="cmps-header">
+                        <h2>Proporciones de la composición para el reporte de uso de sustancias <em>RETC</em></h2>
+                    </div>
+                    <div class="cmps-bricks">
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--magna);" >Magna</div>
+                            <div class="mnu-sect">
+                                <input id="txtSustMgn" name="txtSustMgn" type="hidden" value="" />
+                                <div class="mnu-btn"  id="mnu-btn-Mgn" onclick="editarDatos('Mgn')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                </div>
+                                <div class="mnu-opc" id="mnu-sve-Mgn" onclick="savePorcSust('Mgn')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                </div>
+                                <div class="mnu-opc" id="mnu-ccl-Mgn" onclick="editarDatos('Mgn')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><title>cancelar edición</title><path fill="currentColor" d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13S23.168 3 16 3m0 2c6.087 0 11 4.913 11 11c0 2.726-.99 5.206-2.625 7.125L9.03 7.47A10.95 10.95 0 0 1 16 5M7.625 8.875L22.97 24.53A10.95 10.95 0 0 1 16 27C9.913 27 5 22.087 5 16c0-2.726.99-5.206 2.625-7.125"/></svg>
+                                </div>
+                            </div>
+
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sustancia</th>
+                                            <th>% peso</th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >Benceno</td>
+                                            <td data-title="% peso" id="tblMgnSustA" >1.16</td>
+                                            <td data-title="Toneladas" id="cmpMgnSustA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >Tolueno</td>
+                                            <td data-title="% peso"  id="tblMgnSustB" >6.83</td>
+                                            <td data-title="Toneladas" id="cmpMgnSustB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >Xilenos (m,p,o)</td>
+                                            <td data-title="% peso" id="tblMgnSustC" >7.36</td>
+                                            <td data-title="Toneladas" id="cmpMgnSustC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >Hexano</td>
+                                            <td data-title="% peso" id="tblMgnSustD" >2.06</td>
+                                            <td data-title="Toneladas" id="cmpMgnSustD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >Etilbenceno</td>
+                                            <td data-title="% peso" id="tblMgnSustE" >0.36</td>
+                                            <td data-title="Toneladas" id="cmpMgnSustE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="i-block" id="innr-pop-Mgn" >
+                                    <div class="i-popblock exit-element" id="innr-cpt-Mgn" >
+                                        <table  class="tbl-inp-sus hide-ghost" id="tbl-cpt-Mgn" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Sustancia</th>
+                                                    <th>% peso [0-100]</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Benceno</td>
+                                                    <td data-title="% peso" id="newMgnPSustA" ><input type="text" id="sus-inp-mgn-A" name="ss-inp-mgn-A"  onblur="validaPorcSust('mgn', 'A')" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Tolueno</td>
+                                                    <td data-title="% peso" id="newMgnPSustB" ><input type="text" id="sus-inp-mgn-B" name="ss-inp-mgn-B"  onblur="validaPorcSust('mgn', 'B')" ></td>
+                                                </tr>
+                                                <tr class="phantom" >
+                                                    <td data-title="Sustancia" >Xilenos (m,p,o)</td>
+                                                    <td data-title="% peso" id="newMgnPSustC" ><input type="text" id="sus-inp-mgn-C" name="ss-inp-mgn-C"  onblur="validaPorcSust('mgn', 'C')" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Hexano</td>
+                                                    <td data-title="% peso" id="newMgnPSustD" ><input type="text" id="sus-inp-mgn-D" name="ss-inp-mgn-D"  onblur="validaPorcSust('mgn', 'D')" ></td>
+                                                </tr>
+                                                <tr class="phantom" >
+                                                    <td data-title="Sustancia" >Etilbenceno</td>
+                                                    <td data-title="% peso" id="newMgnPSustE" ><input type="text" id="sus-inp-mgn-E" name="ss-inp-mgn-E"  onblur="validaPorcSust('mgn', 'E')" ></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmps-brckf">
+                                peso sustancia = (% peso) * PVV<sub>ton</sub>
+                            </div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--premium);" >Premium</div>
+                            <div class="mnu-sect">
+                                <input id="txtSustPrm" name="txtSustPrm" type="hidden" value="" />
+                                <div class="mnu-btn"  id="mnu-btn-Prm" onclick="editarDatos('Prm')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                </div>
+                                <div class="mnu-opc" id="mnu-sve-Prm" onclick="savePorcSust('Prm')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                </div>
+                                <div class="mnu-opc" id="mnu-ccl-Prm" onclick="editarDatos('Prm')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><title>cancelar edición</title><path fill="currentColor" d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13S23.168 3 16 3m0 2c6.087 0 11 4.913 11 11c0 2.726-.99 5.206-2.625 7.125L9.03 7.47A10.95 10.95 0 0 1 16 5M7.625 8.875L22.97 24.53A10.95 10.95 0 0 1 16 27C9.913 27 5 22.087 5 16c0-2.726.99-5.206 2.625-7.125"/></svg>
+                                </div>
+                            </div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sustancia</th>
+                                            <th>% peso</th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >Benceno</td>
+                                            <td data-title="% peso" id="tblPrmSustA" >1.54</td>
+                                            <td data-title="Toneladas" id="cmpPrmSustA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >Tolueno</td>
+                                            <td data-title="% peso"  id="tblPrmSustB" >6.86</td>
+                                            <td data-title="Toneladas" id="cmpPrmSustB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >Xilenos (m,p,o)</td>
+                                            <td data-title="% peso" id="tblPrmSustC" >7.67</td>
+                                            <td data-title="Toneladas" id="cmpPrmSustC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >Hexano</td>
+                                            <td data-title="% peso" id="tblPrmSustD" >2.27</td>
+                                            <td data-title="Toneladas" id="cmpPrmSustD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >Etilbenceno</td>
+                                            <td data-title="% peso" id="tblPrmSustE" >0.36</td>
+                                            <td data-title="Toneladas" id="cmpPrmSustE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="i-block" id="innr-pop-Prm" >
+                                    <div class="i-popblock exit-element" id="innr-cpt-Prm" >
+                                        <table  class="tbl-inp-sus hide-ghost" id="tbl-cpt-Prm" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Sustancia</th>
+                                                    <th>% peso [0-100]</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Benceno</td>
+                                                    <td data-title="% peso" id="newPrmPSustA" ><input type="text" id="sus-inp-prm-A" name="ss-inp-prm-A"  onblur="validaPorcSust('prm', 'A')" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Tolueno</td>
+                                                    <td data-title="% peso" id="newPrmPSustB" ><input type="text" id="sus-inp-prm-B" name="ss-inp-prm-B"  onblur="validaPorcSust('prm', 'B')" ></td>
+                                                </tr>
+                                                <tr class="phantom" >
+                                                    <td data-title="Sustancia" >Xilenos (m,p,o)</td>
+                                                    <td data-title="% peso" id="newPrmPSustC" ><input type="text" id="sus-inp-prm-C" name="ss-inp-prm-C"  onblur="validaPorcSust('prm', 'C')" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Hexano</td>
+                                                    <td data-title="% peso" id="newPrmPSustD" ><input type="text" id="sus-inp-prm-D" name="ss-inp-prm-D"  onblur="validaPorcSust('prm', 'D')" ></td>
+                                                </tr>
+                                                <tr class="phantom" >
+                                                    <td data-title="Sustancia" >Etilbenceno</td>
+                                                    <td data-title="% peso" id="newPrmPSustE" ><input type="text" id="sus-inp-prm-E" name="ss-inp-prm-E"  onblur="validaPorcSust('prm', 'E')" ></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmps-brckf">
+                                peso sustancia = (% peso) * PVV<sub>ton</sub>
+                            </div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--diesel);" >Diesel</div>
+                            <div class="mnu-sect">
+                                <input id="txtSustDsl" name="txtSustDsl" type="hidden" value="" />
+                                <div class="mnu-btn"  id="mnu-btn-Dsl" onclick="editarDatos('Dsl')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                </div>
+                                <div class="mnu-opc" id="mnu-sve-Dsl" onclick="savePorcSust('Dsl')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                </div>
+                                <div class="mnu-opc" id="mnu-ccl-Dsl" onclick="editarDatos('Dsl')" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><title>cancelar edición</title><path fill="currentColor" d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13S23.168 3 16 3m0 2c6.087 0 11 4.913 11 11c0 2.726-.99 5.206-2.625 7.125L9.03 7.47A10.95 10.95 0 0 1 16 5M7.625 8.875L22.97 24.53A10.95 10.95 0 0 1 16 27C9.913 27 5 22.087 5 16c0-2.726.99-5.206 2.625-7.125"/></svg>
+                                </div>
+                            </div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sustancia</th>
+                                            <th>% peso</th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >Benceno</td>
+                                            <td data-title="% peso" id="tblDslSustA" >2.40</td>
+                                            <td data-title="Toneladas" id="cmpDslSustA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >Tolueno</td>
+                                            <td data-title="% peso"  id="tblDslSustB" >1.40</td>
+                                            <td data-title="Toneladas" id="cmpDslSustB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >Xilenos (m,p,o)</td>
+                                            <td data-title="% peso" id="tblDslSustC" ></td>
+                                            <td data-title="Toneladas" id="cmpDslSustC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >Hexano</td>
+                                            <td data-title="% peso" id="tblDslSustD" >4.70</td>
+                                            <td data-title="Toneladas" id="cmpDslSustD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >Etilbenceno</td>
+                                            <td data-title="% peso" id="tblDslSustE" ></td>
+                                            <td data-title="Toneladas" id="cmpDslSustE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="i-block" id="innr-pop-Dsl" >
+                                    <div class="i-popblock exit-element" id="innr-cpt-Dsl" >
+                                        <table  class="tbl-inp-sus hide-ghost" id="tbl-cpt-Dsl" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Sustancia</th>
+                                                    <th>% peso [0-100]</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Benceno</td>
+                                                    <td data-title="% peso" id="newDslPSustA" ><input type="text" id="sus-inp-dsl-A" name="sus-inp-dsl-A"  onblur="validaPorcSust('dsl', 'A')" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Tolueno</td>
+                                                    <td data-title="% peso" id="newDslPSustB" ><input type="text" id="sus-inp-dsl-B" name="sus-inp-dsl-B"  onblur="validaPorcSust('dsl', 'B')" ></td>
+                                                </tr>
+                                                <tr class="phantom" >
+                                                    <td data-title="Sustancia" >Xilenos (m,p,o)</td>
+                                                    <td data-title="% peso" id="newDslPSustC" ><input type="text" id="sus-inp-dsl-C" name="sus-inp-prm-C"  onblur="validaPorcSust('dsl', 'C')" ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="Sustancia" >Hexano</td>
+                                                    <td data-title="% peso" id="newDslPSustD" ><input type="text" id="sus-inp-dsl-D" name="sus-inp-prm-D"  onblur="validaPorcSust('dsl', 'D')" ></td>
+                                                </tr>
+                                                <tr class="phantom" >
+                                                    <td data-title="Sustancia" >Etilbenceno</td>
+                                                    <td data-title="% peso" id="newDslPSustE" ><input type="text" id="sus-inp-dsl-E" name="sus-inp-prm-E"  onblur="validaPorcSust('dsl', 'E')" ></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cmps-brckf">
+                                peso sustancia = (% peso) * PVV<sub>ton</sub>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cmps-refrnc"></div>
+                </div>
+            </div>
+
+            <!-- Estimación de factores de emisión -->
+            <div class="factors-section">
+                <div class="fctrs-inner">
+                    <div class="fctrs-hdr">
+                        <h2>Factores de emisión</h2>
+                    </div>
+                    <div class="fctrs-tbl">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Actividad</th>
+                                    <th>Abreviatura</th>
+                                    <th colspan="2">Gasolinas</th>
+                                    <th colspan="2">Diésel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Actividad" >Descarga de pipas a tanques de almacenamiento</td>
+                                    <td data-title="Abreviatura" >FE<sub>dp</sub></td>
+                                    <td data-title="FE - Gasolinas" id="feGasDescP"></td>
+                                    <td data-title="Unidades" >ton/m³</td>
+                                    <td data-title="FE - Diésel" id="feDslDescP"></td>
+                                    <td data-title="Unidades" >ton/m³</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Actividad" >Repostaje vehicular</td>
+                                    <td data-title="Abreviatura" >FE<sub>rv</sub></td>
+                                    <td data-title="FE - Gasolinas" id="feGasDespV"></td>
+                                    <td data-title="Unidades" >ton/m³</td>
+                                    <td data-title="FE - Diésel" id="feDslDespV"></td>
+                                    <td data-title="Unidades" >ton/m³</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Actividad" >Alivio de tanques</td>
+                                    <td data-title="Abreviatura" >FE<sub>at</sub></td>
+                                    <td data-title="FE - Gasolinas" id="feGasAlivT"></td>
+                                    <td data-title="Unidades" >ton/m³</td>
+                                    <td data-title="FE - Diésel" id="feDslAlivT"></td>
+                                    <td data-title="Unidades" >ton/m³</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulas y parámetros de cálculo -->
+            <div class="factors-section">
+                <div class="fctrs-inner">
+                    <div class="fctrs-hdr">
+                        <h2>Formulas y parámetros para el cálculo de emisiones</h2>
+                    </div>
+                    <div class="fctrs-tbl">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Actividad</th>
+                                    <th>Emisiones</th>
+                                    <th>Factor de emisión</th>
+                                    <th>Formula</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Actividad" >Descarga de pipas a tanques de almacenamiento (dp)</td>
+                                    <td data-title="Abreviaura E" >E<sub>dp</sub> - Emisiones</td>
+                                    <td data-title="Abreviatura FE" >FE<sub>dp</sub> - Factor de emisión</td>
+                                    <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV)</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Actividad" >Repostaje vehicular (rv)</td>
+                                    <td data-title="Abreviaura E" >E<sub>rv</sub> - Emisiones</td>
+                                    <td data-title="Abreviatura FE" >FE<sub>rv</sub> - Factor de emisión</td>
+                                    <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV)</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Actividad" >Alivio de tanques (at)</td>
+                                    <td data-title="Abreviaura E" >E<sub>at</sub> - Emisiones</td>
+                                    <td data-title="Abreviatura FE" >FE<sub>at</sub> - Factor de emisión</td>
+                                    <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abreviaturas, paràmetos y valores generales -->
+            <div class="par-for-sus-sect" id="paramsFrmlsSust">
+                <div class="pfss-inner">
+                    <div class="pfss-chips">
+                        <div class="pfss-chip">
+                            <div class="pfss-bite">Mg = Megagramos = ton = Toneladas</div>
+                            <div class="pfss-bite"><em>VV<sub>m</sub></em> - Volumen de ventas de magna</div>
+                            <div class="pfss-bite"><em>VV<sub>p</sub></em> - Volumen de ventas de premium</div>
+                            <div class="pfss-bite"><em>VV<sub>d</sub></em> - Volumen de ventas de diésel</div>
+                            <div class="pfss-bite">ET - Emisiones totales = E<sub>dp</sub> + E<sub>rv</sub> + E<sub>at</sub></div>
+                        </div>
+                        <div class="pfss-chip">
+                            <div class="pfss-bite">VR - Vapores recuperados </div>
+                            <div class="pfss-bite">VRT - Vapores recuperados totales </div>
+                            <div class="pfss-bite"><em>ET<sub>m</sub></em> - Emisiòn total de magna</div>
+                            <div class="pfss-bite"><em>ET<sub>p</sub></em> - Emisiòn total de premium</div>
+                            <div class="pfss-bite"><em>ET<sub>d</sub></em> - Emisiòn total de diésel</div>
+                        </div>
+                        <div class="pfss-chip">
+                            <div class="pfss-bite">ECC - Eficiencia de equipos de control</div>
+                            <div class="pfss-bite">Eficiencia = Ef = 1 - ( ECC / 100 )</div>
+                            <div class="pfss-bite">S  - Sustancia</div>
+                            <div class="pfss-bite">%P - Porcentaje en peso de la sustancia</div>
+                            <div class="pfss-bite">ES - Emisión de la sustancia</div>
+                        </div>
+                        <div class="pfss-chip">
+                            <div class="pfss-bite">Emisiones de benceno - ES<sub>Ben</sub> = %P<sub>Ben</sub> × ET</div>
+                            <div class="pfss-bite">Emisiones de tolueno - ES<sub>Tol</sub> = %P<sub>Tol</sub> × ET</div>
+                            <div class="pfss-bite">Emisiones de xileno - ES<sub>Xil</sub> = %P<sub>Xil</sub> × ET</div>
+                            <div class="pfss-bite">Emisiones de hexano - ES<sub>Hex</sub> = %P<sub>Hex</sub> × ET</div>
+                            <div class="pfss-bite">Emisiones de etilbenceno - ES<sub>EBc</sub> = %P<sub>EBc</sub> × ET</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emisiones sin equipo de control -->
+            <div class="emissec-section">
+                <div class="emss-inner">
+                    <div class="emss-hdr">
+                        <h2>Emisiones evaporativas sin considerar equipos de control</h2>
+                    </div>
+                    <div class="emss-blocks">
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--magna);" >Magna</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>m</sub></em> ≈ <span id="val-ems-mgn" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-ems-mgn" ></span> <em>Kg</em>  ≈ <span id="peso-ems-mgn" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Emisiones de descarga de pipas">E<sub>dp</sub></td>
+                                            <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV<sub>m</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecMgnDsp" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones de respostaje vehicular">E<sub>rv</sub></td>
+                                            <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV<sub>m</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecMgnRpv" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones de alivio de tanques">E<sub>at</sub></td>
+                                            <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV<sub>m</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecMgnAlt" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones totales (magna)">ET<sub>m</sub></td>
+                                            <td></td>
+                                            <td data-emis="0" class="td-rsl" id="emsSecMgnTtl"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--premium);" >Premium</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>p</sub></em> ≈ <span id="val-ems-prm" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-ems-prm" ></span> <em>Kg</em>  ≈ <span id="peso-ems-prm" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Emisiones de descarga de pipas">E<sub>dp</sub></td>
+                                            <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV<sub>p</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecPrmDsp" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones de repostaje vehicular" >E<sub>rv</sub></td>
+                                            <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV<sub>p</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecPrmRpv" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones de alivio de tanques" >E<sub>at</sub></td>
+                                            <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV<sub>p</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecPrmAlt" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones totales (premium)">ET<sub>p</sub></td>
+                                            <td></td>
+                                            <td data-emis="0" class="td-rsl" id="emsSecPrmTtl" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--diesel);" >Diésel</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>d</sub></em> ≈ <span id="val-ems-dsl" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-ems-dsl" ></span> <em>Kg</em>  ≈ <span id="peso-ems-dsl" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Emisiones de descarga de pipas" >E<sub>dp</sub></td>
+                                            <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV<sub>d</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecDslDsp" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones de repostaje vehicular" >E<sub>rv</sub></td>
+                                            <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV<sub>d</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecDslRpv" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones de alivio de tanques" >E<sub>at</sub></td>
+                                            <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV<sub>d</sub>)</td>
+                                            <td data-emis="0" class="td-rsp" id="emsSecDslAlt" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones totales (diésel)">ET<sub>d</sub></td>
+                                            <td></td>
+                                            <td data-emis="0" class="td-rsl" id="emsSecDslTtl" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emisiones de sustancias RETC sin considerar equipos de control -->
+            <div class="comp-sect" id="composicion">
+                <div class="cmps-inner">
+                    <div class="cmps-header">
+                        <h2>Emisiones de sustancias <em>RETC</em> sin considerar equipos de control</h2>
+                    </div>
+                    <div class="cmps-bricks">
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--magna);" >Magna</div>
+                            <div class="cmps-ccpt"><em>ET</em><sub>m</sub> = <span id="pfss-chp-mgn"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ES</th>
+                                            <th>%P × ET<sub>m</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="secMgnSustA" >1.16</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="emsSecMgnSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="secMgnSustB" >6.83</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="emsSecMgnSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>Xil</sub> = </td>
+                                            <td data-title="% peso" ><span id="secMgnSustC" >7.36</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="emsSecMgnSusC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" ><span id="secMgnSustD" >2.06</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="emsSecMgnSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>EBc</sub> = </td>
+                                            <td data-title="% peso" ><span id="secMgnSustE" >0.36</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="emsSecMgnSusE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--premium);" >Premium</div>
+                            <div class="cmps-ccpt"><em>ET</em><sub>p</sub> = <span id="pfss-chp-prm"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ES</th>
+                                            <th>%P × ET<sub>p</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="secPrmSustA" >1.54</span>% × ET<sub>p</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecPrmSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="secPrmSustB" >6.86</span>% × ET<sub>p</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecPrmSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>Xil</sub> = </td>
+                                            <td data-title="% peso" ><span id="secPrmSustC" >7.67</span>% × ET<sub>p</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecPrmSusC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" ><span id="secPrmSustD" >2.27</span>% × ET<sub>p</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecPrmSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>EBc</sub> = </td>
+                                            <td data-title="% peso" ><span id="secPrmSustE" >0.36</span>% × ET<sub>p</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecPrmSusE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--diesel);" >Diésel</div>
+                            <div class="cmps-ccpt"><em>ET</em><sub>d</sub> = <span id="pfss-chp-dsl"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ES</th>
+                                            <th>%P × ET<sub>d</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="secDslSustA" >2.40</span>% × ET<sub>d</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecDslSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="secDslSustB" >1.40</span>% × ET<sub>d</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecDslSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>Xil</sub></td>
+                                            <td data-title="% peso" ><span id="secDslSustC" ></span></td>
+                                            <td data-title="Toneladas" id="emsSecDslSusC" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" ><span id="secDslSustD" >4.70</span>% × ET<sub>d</sub> = </td>
+                                            <td data-title="Toneladas" id="emsSecDslSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>EBc</sub></td>
+                                            <td data-title="% peso" ><span id="secDslSustE" ></span></td>
+                                            <td data-title="Toneladas" id="emsSecDslSusE" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                    </div>
+                    <div class="cmps-refrnc"></div>
+                </div>
+            </div>
+
+            <!-- Captura de los porcentajes de eficiencia de los equipos de control -->
+            <div class="ecef-sect" >
+                <!-- Emisiones considerado eficiencia de los equipos de control - ecef -->
+                <div class="ecef-inner" >
+                    <div class="ecef-header">
+                        <h2>Eficiencia de los equipos de control</h2>
+                        <p>Actividades: Descarga de combustibles a tanques de almacenammiento, alivio de tanques de almacenamiento y despacho de combustibles</p>
+                        <p class="ocultarObj">Capture el porcentaje de la eficiencia total del equipo de control para cada actividad</p>
+                    </div>
+                    <div class="ecef-body">
+                        <div class="comb-valrs">
+                            <div class="comb-input" >
+                                <div class="ecef-chip" >Descarga de pipas</div>
+                                <label for="cmb-inp-dsp">Eficiencia
+                                    <input type="text" id="cmb-inp-dsp" name="cmb-inp-dsp" class="ocultarObj" onblur="validaPorcentaje('cmb-inp-dsp')" >
+                                    <p id="cmb-lbl-dsp" class="etiq-oculta" ></p>
+                                    <span>%</span>
+                                </label>
+                                <div class="ecef-note" >Rango de valor [0 a 100]</div>
+                            </div>
+                            <div class="comb-input" >
+                                <div class="ecef-chip" >Repostaje vehicular</div>
+                                <label for="cmb-inp-rpv">Eficiencia
+                                    <input type="text" id="cmb-inp-rpv" name="cmb-inp-rpv" class="ocultarObj" onblur="validaPorcentaje('cmb-inp-rpv')"  >
+                                    <p id="cmb-lbl-rpv" class="etiq-oculta" ></p>
+                                    <span>%</span>
+                                </label>
+                                <div class="ecef-note" >Rango de valor [0 a 100]</div>
+                            </div>
+                            <div class="comb-input" >
+                                <div class="ecef-chip" >Alivio de tanques</div>
+                                <label for="cmb-inp-alt">Eficiencia
+                                    <input type="text" id="cmb-inp-alt" name="cmb-inp-alt" class="ocultarObj"  onblur="validaPorcentaje('cmb-inp-alt')"  >
+                                    <p id="cmb-lbl-alt" class="etiq-oculta" ></p>
+                                    <span>%</span>
+                                </label>
+                                <div class="ecef-note" >Rango de valor [0 a 100]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emisiones considerando la eficiencia de equipos de control -->
+            <div class="emissec-section">
+                <div class="emss-inner">
+                    <div class="emss-hdr">
+                        <h2>Emisiones evaporativas considerando la eficiencia de los equipos de control</h2>
+                    </div>
+                    <div class="emss-blocks">
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--magna);" >Magna</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>m</sub></em> ≈ <span id="val-emc-mgn" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-emc-mgn" ></span> <em>Kg</em>  ≈ <span id="peso-emc-mgn" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="">E<sub>dp</sub></td>
+                                            <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV<sub>m</sub>) × Ef<sub>dp</sub></td>
+                                            <td data-title="0" id="emsCecMgnDsp" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="">E<sub>rv</sub></td>
+                                            <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV<sub>m</sub>) × Ef<sub>rv</sub></td>
+                                            <td data-title="0" id="emsCecMgnRpv" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="">E<sub>at</sub></td>
+                                            <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV<sub>m</sub>) × Ef<sub>at</sub></td>
+                                            <td data-title="0" id="emsCecMgnAlt" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones totales (magna)">ET<sub>m</sub></td>
+                                            <td></td>
+                                            <td data-emis="0" id="emsCecMgnTtl"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--premium);" >Premium</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>p</sub></em> ≈ <span id="val-emc-prm" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-emc-prm" ></span> <em>Kg</em>  ≈ <span id="peso-emc-prm" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="">E<sub>dp</sub></td>
+                                            <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV<sub>m</sub>) × Ef<sub>dp</sub></td>
+                                            <td data-emis="0" id="emsCecPrmDsp" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="" >E<sub>rv</sub></td>
+                                            <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV<sub>m</sub>) × Ef<sub>rv</sub></td>
+                                            <td data-emis="0" id="emsCecPrmRpv" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="" >E<sub>at</sub></td>
+                                            <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV<sub>m</sub>) × Ef<sub>at</sub></td>
+                                            <td data-emis="0" id="emsCecPrmAlt" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones totales (premium)">ET<sub>p</sub></td>
+                                            <td></td>
+                                            <td data-emis="0" id="emsCecPrmTtl" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--diesel);" >Diésel</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>d</sub></em> ≈ <span id="val-emc-dsl" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-emc-dsl" ></span> <em>Kg</em>  ≈ <span id="peso-emc-dsl" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="" >E<sub>dp</sub></td>
+                                            <td data-title="Formula" id="">E<sub>dp</sub>=(FE<sub>dp</sub> × VV<sub>m</sub>) × Ef<sub>dp</sub></td>
+                                            <td data-emis="0" id="emsCecDslDsp" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="" >E<sub>rv</sub></td>
+                                            <td data-title="Formula" id="">E<sub>rv</sub>=(FE<sub>rv</sub> × VV<sub>m</sub>) × Ef<sub>rv</sub></td>
+                                            <td data-emis="0" id="emsCecDslRpv" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="" >E<sub>at</sub></td>
+                                            <td data-title="Formula" id="">E<sub>at</sub>=(FE<sub>at</sub> × VV<sub>m</sub>) × Ef<sub>at</sub></td>
+                                            <td data-emis="0" id="emsCecDslAlt" >000</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Emisiones totales (diésel)">ET<sub>d</sub></td>
+                                            <td></td>
+                                            <td data-emis="0" id="emsCecDslTtl" >000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emisiones de sustancias RETC con equipos de control -->
+            <div class="comp-cec" id="composicionCec">
+                <div class="cmps-inner">
+                    <div class="cmps-header">
+                        <h2>Emisiones de sustancias <em>RETC</em> con eficiencia de equipos de control</h2>
+                    </div>
+                    <div class="cmps-bricks">
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--magna);" >Magna</div>
+                            <div class="cmps-ccpt"><em>ET</em><sub>m</sub> = <span id="cmps-chp-mgn"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ES</th>
+                                            <th>%P × ET<sub>m</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" id="cecMgnSustA" ><span>1.16</span>% × ET<sub>m</sub> =  </td>
+                                            <td data-emis="" id="cecMgnSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Tol</sub> = </td>
+                                            <td data-title="% peso"  id="cecMgnSustB" ><span>6.83</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="cecMgnSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>Xil</sub> = </td>
+                                            <td data-title="% peso" id="cecMgnSustC" ><span>7.36</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="cecMgnSusC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" id="cecMgnSustD" ><span>2.06</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="cecMgnSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>EBc</sub> = </td>
+                                            <td data-title="% peso" id="cecMgnSustE" ><span>0.36</span>% × ET<sub>m</sub> = </td>
+                                            <td data-emis="" id="cecMgnSusE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--premium);" >Premium</div>
+                            <div class="cmps-ccpt"><em>ET</em><sub>p</sub> = <span id="cmps-chp-prm"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ES</th>
+                                            <th>%P × ET<sub>p</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" id="cecPrmSustA" ><span>1.54</span>% × ET<sub>p</sub>  = </td>
+                                            <td data-emis="" id="cecPrmSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Tol</sub> = </td>
+                                            <td data-title="% peso"  id="cecPrmSustB" ><span>6.86</span>% × ET<sub>p</sub> = </td>
+                                            <td data-emis="" id="cecPrmSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>Xil</sub> = </td>
+                                            <td data-title="% peso" id="cecPrmSustC" ><span>7.67</span>% × ET<sub>p</sub> = </td>
+                                            <td data-emis="" id="cecPrmSusC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" id="cecPrmSustD" ><span>2.27</span>% × ET<sub>p</sub> = </td>
+                                            <td data-emis="" id="cecPrmSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>EBc</sub> = </td>
+                                            <td data-title="% peso" id="cecPrmSustE" ><span>0.36</span>% × ET<sub>p</sub> = </td>
+                                            <td data-emis="" id="cecPrmSusE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--diesel);" >Diésel</div>
+                            <div class="cmps-ccpt"><em>ET</em><sub>d</sub> = <span id="cmps-chp-dsl"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ES</th>
+                                            <th>%P × ET<sub>d</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="cecDslSustA" >2.40</span>% × ET<sub>d</sub> = </td>
+                                            <td data-emis="" id="cecDslSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="cecDslSustB" >1.40</span>% × ET<sub>d</sub> = </td>
+                                            <td data-emis="" id="cecDslSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>Xil</sub></td>
+                                            <td data-title="% peso" ><span id="cecDslSustC" ></span></td>
+                                            <td data-emis="" id="cecDslSusC" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >ES<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" ><span id="cecDslSustD" >4.70</span>% × ET<sub>d</sub> = </td>
+                                            <td data-emis="" id="cecDslSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >ES<sub>EBc</sub></td>
+                                            <td data-title="% peso" ><span id="cecDslSustE" ></span></td>
+                                            <td data-emis="" id="cecDslSusE" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                    </div>
+                    <div class="cmps-refrnc"></div>
+                </div>
+            </div>
+
+            <!-- Vapores de combustible recuperado o no emitido - Vapores recuperados - vprc -->
+            <div class="vprc-section">
+                <div class="vprc-inner">
+                    <div class="vprc-hdr">
+                        <h2>Vapores recuperados o emisiones no emitidas para estaciones de servicio con equipos de control</h2>
+                    </div>
+                    <div class="emss-blocks">
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--magna);" >Magna</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>m</sub></em> ≈ <span id="val-vpr-mgn" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-vpr-mgn" ></span> <em>Kg</em>  ≈ <span id="peso-vpr-mgn" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>VR<sub>dp</sub></td>
+                                            <td>VR<sub>dp</sub> =  E<sub>dp</sub> - (E<sub>dp</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecMgnDsp" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VR<sub>rv</sub></td>
+                                            <td>VR<sub>rv</sub> =  E<sub>rv</sub> - (E<sub>rv</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecMgnRpv" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VR<sub>at</sub></td>
+                                            <td>VR<sub>at</sub> =  E<sub>at</sub> - (E<sub>at</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecMgnAlt" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="">VRT<sub>m</sub></td>
+                                            <td>VRT = E<sub>dp</sub> + E<sub>rv</sub> + E<sub>at</sub> </td>
+                                            <td data-emis="0" id="vprCecMgnTtl"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--premium);" >Premium</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>p</sub></em> ≈ <span id="val-vpr-prm" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-vpr-prm" ></span> <em>Kg</em>  ≈ <span id="peso-vpr-prm" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>VR<sub>dp</sub></td>
+                                            <td>VR<sub>dp</sub> =  E<sub>dp</sub> - (E<sub>dp</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecPrmDsp" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VR<sub>rv</sub></td>
+                                            <td>VR<sub>rv</sub> =  E<sub>rv</sub> - (E<sub>rv</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecPrmRpv" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VR<sub>at</sub></td>
+                                            <td>VR<sub>at</sub> =  E<sub>at</sub> - (E<sub>at</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecPrmAlt" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VRT<sub>p</sub></td>
+                                            <td>VRT = E<sub>dp</sub> + E<sub>rv</sub> + E<sub>at</sub> </td>
+                                            <td data-emis="0" id="vprCecPrmTtl" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                        <div class="emss-block">
+                            <div class="emss-blockh" style="color: var(--diesel);" >Diésel</div>
+                            <div class="emss_chip">
+                                <div class="emss-ccpt" >
+                                    <p><em>VV<sub>d</sub></em> ≈ <span id="val-vpr-dsl" ></span> <em>m<sup>3</sup></em> ≈ <span id="masa-vpr-dsl" ></span> <em>Kg</em>  ≈ <span id="peso-vpr-dsl" ></span> <em>Ton</em>  </p>
+                                </div>
+                            </div>
+                            <div class="emss-blockt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Actividad</th>
+                                            <th>Formula</th>
+                                            <th>Emisión</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>VR<sub>dp</sub></td>
+                                            <td>VR<sub>dp</sub> =  E<sub>dp</sub> - (E<sub>dp</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecDslDsp" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VR<sub>rv</sub></td>
+                                            <td>VR<sub>rv</sub> =  E<sub>rv</sub> - (E<sub>rv</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecDslRpv" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VR<sub>at</sub></td>
+                                            <td>VR<sub>at</sub> =  E<sub>at</sub> - (E<sub>at</sub>)<sub>ECC</sub></td>
+                                            <td data-emis="0" id="vprCecDslAlt" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td>VRT<sub>d</sub></td>
+                                            <td>VRT = E<sub>dp</sub> + E<sub>rv</sub> + E<sub>at</sub> </td>
+                                            <td data-emis="0" id="vprCecDslTtl" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="emss-blockf"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vapores recuperados de sustancias RETC - vrsr -->
+            <div class="vrsr-sect" id="vaporesRETC">
+                <div class="vrsr-inner">
+                    <div class="vrsr-header">
+                        <h2>Vapores recuperados de sustancias <em>RETC</em></h2>
+                    </div>
+                    <div class="cmps-bricks">
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--magna);" >Magna</div>
+                            <div class="cmps-ccpt"><em>VRT</em><sub>m</sub> = <span id="vrsr-chp-mgn"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>VR</th>
+                                            <th>%P × VR<sub>m</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrMgnSustA" >1.16</span>% × VR<sub>m</sub> =  </td>
+                                            <td data-emis="" id="vsrMgnSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrMgnSustB" >6.83</span>% × VR<sub>m</sub> = </td>
+                                            <td data-emis="" id="vsrMgnSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >VR<sub>Xil</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrMgnSustC" >7.36</span>% × VR<sub>m</sub> = </td>
+                                            <td data-emis="" id="vsrMgnSusC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrMgnSustD" >2.06</span>% × VR<sub>m</sub> = </td>
+                                            <td data-emis="" id="vsrMgnSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >VR<sub>EBc</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrMgnSustE" >0.36</span>% × VR<sub>m</sub> = </td>
+                                            <td data-emis="" id="vsrMgnSusE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--premium);" >Premium</div>
+                            <div class="cmps-ccpt"><em>VRT</em><sub>p</sub> = <span id="vrsr-chp-prm"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>VR</th>
+                                            <th>%P × VR<sub>p</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrPrmSustA" >1.54</span>% × VR<sub>p</sub>  = </td>
+                                            <td data-emis="" id="vsrPrmSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrPrmSustB" >6.86</span>% × VR<sub>p</sub> = </td>
+                                            <td data-emis="" id="vsrPrmSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >VR<sub>Xil</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrPrmSustC" >7.67</span>% × VR<sub>p</sub> = </td>
+                                            <td data-emis="" id="vsrPrmSusC" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Hex</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrPrmSustD" >2.27</span>% × VR<sub>p</sub> = </td>
+                                            <td data-emis="" id="vsrPrmSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >VR<sub>EBc</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrPrmSustE" >0.36</span>% × VR<sub>p</sub> = </td>
+                                            <td data-emis="" id="vsrPrmSusE" >000.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                        <div class="cmps-brick">
+                            <div class="cmps-brckh" style="color: var(--diesel);" >Diésel</div>
+                            <div class="cmps-ccpt"><em>VRT</em><sub>d</sub> = <span id="vrsr-chp-dsl"></span></div>
+                            <div class="cmps-brckt">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>VR</th>
+                                            <th>%P × VR<sub>d</sub></th>
+                                            <th>Toneladas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Ben</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrDslSustA" >2.40</span>% × VR<sub>d</sub> = </td>
+                                            <td data-emis="" id="vsrDslSusA" >000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Tol</sub> = </td>
+                                            <td data-title="% peso" ><span id="vsrDslSustB" >1.40</span>% × VR<sub>d</sub> = </td>
+                                            <td data-emis="" id="vsrDslSusB" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >VR<sub>Xil</sub></td>
+                                            <td data-title="% peso"><span id="vsrDslSustC" ></span></td>
+                                            <td data-emis="" id="vsrDslSusC" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-title="Sustancia" >VR<sub>Hex</sub> = </td>
+                                            <td data-title="% peso"><span id="vsrDslSustD" >4.70%</span> × VR<sub>d</sub> = </td>
+                                            <td data-emis="" id="vsrDslSusD" >000.00</td>
+                                        </tr>
+                                        <tr class="phantom" >
+                                            <td data-title="Sustancia" >VR<sub>EBc</sub></td>
+                                            <td data-title="% peso" ><span id="vsrDslSustE" ></span></td>
+                                            <td data-emis="" id="vsrDslSusE" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cmps-brckf"></div>
+                        </div>
+                    </div>
+                    <div class="cmps-refrnc"></div>
+                </div>
+            </div>
+
+
+            <!-- Referencias Bibliográficas, formulas, parámetros y factores de emisiòn  -->
+        	<!-- Descarga de pipas  -->
+            <div class="info-blueprint" >
+                <div class="section-header">
+                     <p class="section-title" >Bibliografía</p>
+                     <h2 class="section-intro" >Referencias bibliográficas de los factores de emisión</h2>
+                </div>
+            </div>
+
+        	<div class="section-annotation" data-reveal>
+        			<h2 class="annotation-title">Descarga de pipas a tanques de almacenamiento</h2>
+        	 </div>
+
+        	<!-- Ficha bibliográfica 1  -->
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Composición de la gasolina</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">Ficha técnica - Destilados del petróleo - La gasolina</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>Secretaría de Energía (SENER) - Comisión Nacional para el Uso Eficiente de la Energía (CONUEE)</td>
+        				</tr>
+        				<tr>
+        					<td>Área responsable</td>
+        					<td>Dirección de Movilidad y Transporte</td>
+        				</tr>
+        				<tr>
+        					<td>Título</td>
+        					<td>Ficha Técnica de destilados del petróleo: La gasolina</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<!-- Ficha bibliográfica 2  -->
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Factores de emisiòn de fuentes estacionarias de almacenamiento y distribuciòn de combustible</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">AP-42: Compilation of Air Emissions Factors from Stationary Sources</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>U.S. Environmental Protection Agency (.gov), Seabreeze Boulevard, Sunset Cove, FL 33139</td>
+        				</tr>
+        				<tr>
+        					<td>Consultor</td>
+        					<td>Radian International LLC 1997</td>
+        				</tr>
+        				<tr>
+        					<td>Titulo</td>
+        					<td>Section 5.2 outlines how the transportation and marketing of petroleum liquids create air pollution, mainly through loading losses, storage leaks, and refueling</td>
+        				</tr>
+        				<tr>
+        					<td>Sección</td>
+        					<td>5.2 transportation and marketing of petroleum liquids</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<!-- ===== Formula para obtener el factor de emisión ===== -->
+        	<div class="revision-block" data-reveal>
+                           <div class="revision-header" >
+                               Formula para obtener el factor de emisión de la actividad de descarga de pipas a tanques de almacenamiento
+                           </div>
+                           <div class="revision-body" >
+                               <div class="blck-row">
+                                   <div class="blck-clmn">
+                                       <p>Descarga de pipas a tanques de almacenamiento</p>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <p>(dp)</p>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">12.46</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">×</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip">S×P×M</div>
+                                       <div class="blck-chip">—————</div>
+                                       <div class="blck-chip">T</div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip">lb</div>
+                                       <div class="blck-chip">——————</div>
+                                       <div class="blck-chip">1000gal</div>
+                                   </div>
+                               </div>
+                               <div class="blck-row borde-superior">
+                                   <div class="blck-clmn">
+                                       <p>Pasos para obtener el factor de conversión</p>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <ul>
+                                           <li>1) Libras a kilogramos: 1lb = 0.45359237 kg</li>
+                                           <li>2) Galones a metros cúbicos: 1 gal (EE. UU.) = 0.00378541 m³ -> 1,000 gal = 3.78541 m³</li>
+                                           <li>3) Kilogramos a toneladas: 1 t  = 1,000 kg</li>
+                                           <li>4) lb / (1,000 gal) × (0.45359237 kg) / (1 lb) × ( 1,000 / (0.00378541m³) ) × ( 1 ton / (1,000kg) ) = 0.000119815 t/m³</li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </div>
+        	</div>
+
+        	<!-- ===== Valores base para el factor de emisión ===== -->
+        	<div class="revision-block" data-reveal>
+        		<div class="dim-callout">factor de emisiòn de la gasolina</div>
+        		<table class="revision-table">
+        			<thead>
+        				<tr>
+        					<th>Variable</th>
+        					<th>Abreviatura</th>
+        					<th style="width: 10rem;" >
+                                Valor
+                                <div class="mnu-lst-icn">
+                                    <div class="mnu-icn" id="dspg-icn-edt" onclick="showEditDSP('dspg')" >
+                                        <input id="dspg-txt-edt" name="mnu-txt-edt" type="hidden" value="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dspg-svg-edt" ><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                    </div>
+                                    <div class="mnu-icn dspg-icn-sve" id="dspg-icn-sve" onclick="saveEditDSP('dspg')" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dspg-svg-sve" ><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                    </div>
+                                </div>
+                            </th>
+        					<th>Unidad</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Factor de saturación</td>
+        					<td>S</td>
+        					<td class="div-cell" >
+                                <span id="dspg-spn-fcs" >1</span>
+                                <input type="text" id="dspg-inp-fcs" name="dspg-inp-fcs" class="hide-div" value="1">
+                            </td>
+        					<td>Tabla<sup>a</sup></td>
+        				</tr>
+        				<tr>
+        					<td>Presión real de vapor</td>
+        					<td>P</td>
+        					<td class="div-cell" >
+                                <span id="dspg-spn-prv" >6.6</span>
+                                <input type="text" id="dspg-inp-prv" name="dspg-inp-prv" class="hide-div" value="6.6">
+                            </td>
+        					<td>PSIA</td>
+        				</tr>
+        				<tr>
+        					<td>Peso molecular de vapores</td>
+        					<td>M</td>
+        					<td class="div-cell" >
+                                <span id="dspg-spn-pmv" >66</span>
+                                <input type="text" id="dspg-inp-pmv" name="dspg-inp-pmv" class="hide-div" value="66">
+                            </td>
+        					<td>(lb/lb- mol)</td>
+        				</tr>
+        				<tr>
+        					<td>Temperatura del combustible</td>
+        					<td>T</td>
+        					<td class="div-cell" >
+                                <span id="dspg-spn-tgs" >540</span>
+                                <input type="text" id="dspg-inp-tgs" name="dspg-inp-tgs" class="hide-div" value="540">
+                            </td>
+        					<td>°R</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE</td>
+        					<td>
+                                <span id="dspg-spn-fea" >10.05107</span>
+                            </td>
+        					<td>lb/(1,000 gal)</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de conversión de [lb/1,000 gal] a [ton/m³]</td>
+        					<td>FC</td>
+        					<td>0.000119815</td>
+        					<td>ton/m³</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE<sub>dp</sub></td>
+        					<td>
+                                <span id="dspg-spn-fem" >0.001204</span>
+                            </td>
+        					<td>ton/m³</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<div class="revision-block" data-reveal>
+        		<div class="dim-callout">Factor de emisión del diésel</div>
+        		<table class="revision-table">
+        			<thead>
+        				<tr>
+        					<th>Variable</th>
+        					<th>Abreviatura</th>
+        					<th style="width: 10rem;" >
+                                Valor
+                                <div class="mnu-lst-icn">
+                                    <div class="mnu-icn" id="dspd-icn-edt" onclick="showEditDSP('dspd')" >
+                                        <input id="dspd-txt-edt" name="mnu-txt-edt" type="hidden" value="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dspd-svg-edt" ><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                    </div>
+                                    <div class="mnu-icn dspd-icn-sve" id="dspd-icn-sve" onclick="saveEditDSP('dspd')" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dspd-svg-sve" ><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                    </div>
+                                </div>
+                            </th>
+        					<th>Unidad</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Factor de saturación</td>
+        					<td>S</td>
+        					<td class="div-cell" >
+                                <span id="dspd-spn-fcs" >1</span>
+                                <input type="text" id="dspd-inp-fcs" name="dspd-inp-fcs" class="hide-div" value="1">
+                            </td>
+        					<td>Tabla<sup>a</sup></td>
+        				</tr>
+        				<tr>
+        					<td>Presión real de vapor</td>
+        					<td>P</td>
+        					<td class="div-cell" >
+                                <span id="dspd-spn-prv" >0.004</span>
+                                <input type="text" id="dspd-inp-prv" name="dspd-inp-prv" class="hide-div" value="0.004">
+                            </td>
+        					<td>PSIA</td>
+        				</tr>
+        				<tr>
+        					<td>Peso molecular de vapores</td>
+        					<td>M</td>
+        					<td class="div-cell" >
+                                <span id="dspd-spn-pmv" >170</span>
+                                <input type="text" id="dspd-inp-pmv" name="dspd-inp-pmv" class="hide-div" value="170">
+                            </td>
+        					<td>(lb/lb- mol)</td>
+        				</tr>
+        				<tr>
+        					<td>Temperatura del combustible</td>
+        					<td>T</td>
+        					<td class="div-cell" >
+                                <span id="dspd-spn-tgs" >528</span>
+                                <input type="text" id="dspd-inp-tgs" name="dspd-inp-tgs" class="hide-div" value="528">
+                            </td>
+        					<td>°R</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE</td>
+        					<td>
+                                <span id="dspd-spn-fea" >0.016047</span>
+                            </td>
+        					<td>lb/(1,000 gal)</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de conversión de [lb/1,000 gal] a [t/m³]</td>
+        					<td>FC</td>
+        					<td>0.000119815</td>
+        					<td>t/m³</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE<sub>dp</sub></td>
+        					<td>
+                                <span id="dspd-spn-fem" >0.00000000192267</span>
+                            </td>
+        					<td>ton/m3</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+
+        	<!-- Repostaje vehicular -->
+        	<div class="section-annotation" data-reveal>
+        			<h2 class="annotation-title">Repostaje vehicular</h2>
+        	</div>
+        	<!-- Ficha bibliográfica 1  -->
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Emisiones de la actividad de carga de combustible a vehículos y derrames</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">Control of volatile organic emissions from storage of petroleum liquids in fixed-roof tanks</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>U.S. Environmental Protection Agency (.gov), Seabreeze Boulevard, Sunset Cove, FL 33139</td>
+        				</tr>
+        				<tr>
+        					<td>Área responsable</td>
+        					<td>Office of air and waste management</td>
+        				</tr>
+        				<tr>
+        					<td>Nombre del documento</td>
+        					<td>EPA-450/2-77-036 [December 1977]  OAQPS No. 1.2-089  Guidline series</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<!-- Ficha bibliográfica 2  -->
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Manuales del Programa de Inventarios de emisiones de México</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">Volumen V - Desarrollo de inventarios de emisiones de fuentes de área</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>Radian International LLC 10389 Old Placerville Road Sacramento, CA 95827</td>
+        				</tr>
+        				<tr>
+        					<td>Secciòn</td>
+        					<td>7.1 Distribución de Gasolina</td>
+        				</tr>
+        				<tr>
+        					<td>Nota</td>
+        					<td>Tabla 7.1-2 Propiedades (PMV y PVA) de Derivados de Petróleo Líquidos Selectos</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<!-- ===== Formula para obtener el factor de emisión ===== -->
+        	<div class="revision-block" data-reveal>
+                           <div class="revision-header" >
+                               Formula para obtener el factor de emisión de la actividad de repostaje vehicular
+                           </div>
+                           <div class="revision-body" >
+                               <div class="blck-row">
+                                   <div class="blck-clmn">
+                                       <p>Repostaje vehicular(rv)</p>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">264.2</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">×</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">[</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">( -5.909 )</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">-</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">0.0949(∆T)</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">+</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">0.0884(TS)</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">+</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">0.485(RVP)</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <div class="blck-chip"></div>
+                                       <div class="blck-chip">]</div>
+                                       <div class="blck-chip"></div>
+                                   </div>
+                               </div>
+                               <div class="blck-row borde-superior">
+                                   <div class="blck-clmn">
+                                       <p>Factor de conversión de miligramos por litro (mg/l) a Megagramos por metro cúbico (Mg/m³): 1 mg/l = 1 Mg/m³</p>
+                                   </div>
+                                   <div class="blck-clmn">
+                                       <ul>
+                                           <li>a) Miligramos a Megagramos: 1 Mg = 10^9 mg -> un Megagramo equivale a un millón de gramos y un gramo a mil miligramos</li>
+                                           <li>b) Litros a Metros cúbicos: 1 m³ = 1,000 litros</li>
+                                           <li>c) Relación final: proporción de masa entre volumen ( (10<sup>6</sup> mg) / (1 L) ) = 1 Mg/m³ → ( (1 mg ) / (1 L) ) = (1/10m³) * ( mg / L )</li>
+                                           <li>d) (1/10³) * ( mg / L ) × ( (1 Mg) / (1,000,000 g) ) × ( (1,000 L) / (1 m³) ) = 10<sup>-6</sup> Mg/m³ = 1 g/m³ = 10<sup>-6</sup> ton/m³</li>
+                                       </ul>
+                                   </div>
+                               </div>
+
+                           </div>
+        	</div>
+
+        	<!-- ===== Valores base para el factor de emisión ===== -->
+        	<div class="revision-block" data-reveal>
+        		<div class="dim-callout">factor de emisiòn de la gasolina</div>
+        		<table class="revision-table">
+        			<thead>
+        				<tr>
+        					<th>Variable</th>
+        					<th>Abreviatura</th>
+        					<th style="width: 9rem;" >
+                                Valor
+                                <div class="mnu-lst-icn">
+                                    <div class="mnu-icn" id="dsvg-icn-edt" onclick="showEditDSV('dsvg')" >
+                                        <input id="dsvg-txt-edt" name="mnu-txt-edt" type="hidden" value="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dsvg-svg-edt" ><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                    </div>
+                                    <div class="mnu-icn dsvg-icn-sve" id="dsvg-icn-sve" onclick="saveEditDSV('dsvg')" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dsvg-svg-sve" ><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                    </div>
+                                </div>
+                            </th>
+        					<th>Unidad</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Temperatura del combustible que sale del dispensario </td>
+        					<td>Td</td>
+        					<td class="div-cell" >
+                                <span id="dsvg-spn-tds" >59</span>
+                                <input type="text" id="dsvg-inp-tds" name="dsvg-inp-tds" class="hide-div" value="59">
+                            </td>
+        					<td>°F</td>
+        				</tr>
+        				<tr>
+        					<td>Temperatura del combustible del vehículo </td>
+        					<td>Tv</td>
+        					<td class="div-cell" >
+                                <span id="dsvg-spn-tvh" >59</span>
+                                <input type="text" id="dsvg-inp-tvh" name="dsvg-inp-tvh" class="hide-div" value="59">
+                            </td>
+        					<td>°F</td>
+        				</tr>
+        				<tr>
+        					<td>Diferencia de temperaturas del combustible que sale del dispensario y del combustible del tanque del vehículo</td>
+        					<td>ΔT</td>
+        					<td class="div-cell" >
+                                <span id="dsvg-spn-dft" >0</span>
+                                <input type="text" id="dsvg-inp-dft" name="dsvg-inp-dft" class="hide-div" value="0">
+                            </td>
+        					<td>°F</td>
+        				</tr>
+        				<tr>
+        					<td>Presión de Vapor Reid (psia)</td>
+        					<td>RPV</td>
+        					<td class="div-cell" >
+                                <span id="dsvg-spn-pvr" >10</span>
+                                <input type="text" id="dsvg-inp-pvr" name="dsvg-inp-pvr" class="hide-div" value="10">
+                            </td>
+        					<td>PSIA</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE<sub>dp</sub></td>
+        					<td>
+                                <span id="dsvg-spn-fea" >1098.17372</span>
+                            </td>
+        					<td>mg/litro</td>
+        				</tr>
+        				<tr>
+        					<td>Factore de conversión de mg a ton</td>
+        					<td>FC</td>
+        					<td>1/1000000</td>
+        					<td>ton/m³</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE<sub>dp</sub></td>
+        					<td>
+                                <span id="dsvg-spn-fem" >0.00109817372</span>
+                            </td>
+        					<td>ton/m³</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<div class="revision-block" data-reveal>
+        		<div class="dim-callout">factor de emisiòn de diésel</div>
+        		<table class="revision-table">
+        			<thead>
+        				<tr>
+        					<th>Variable</th>
+        					<th>Abreviatura</th>
+        					<th style="width: 9rem;" >
+                                Valor
+                                <div class="mnu-lst-icn">
+                                    <div class="mnu-icn" id="dsvd-icn-edt" onclick="showEditDSV('dsvd')" >
+                                        <input id="dsvd-txt-edt" name="mnu-txt-edt" type="hidden" value="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dsvd-svg-edt" ><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                    </div>
+                                    <div class="mnu-icn dsvd-icn-sve" id="dsvd-icn-sve" onclick="saveEditDSV('dsvd')" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="dsvd-svg-sve" ><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                    </div>
+                                </div>
+                            </th>
+        					<th>Unidad</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Temperatura del combustible que sale del dispensario </td>
+        					<td>Td</td>
+        					<td class="div-cell" >
+                                <span id="dsvd-spn-tds" >59</span>
+                                <input type="text" id="dsvd-inp-tds" name="dsvd-inp-tds" class="hide-div" value="59">
+                            </td>
+        					<td>°F</td>
+        				</tr>
+        				<tr>
+        					<td>Temperatura del combustible del vehículo </td>
+        					<td>Tv</td>
+        					<td class="div-cell" >
+                                <span id="dsvd-spn-tvh" >68</span>
+                                <input type="text" id="dsvd-inp-tvh" name="dsvd-inp-tvh" class="hide-div" value="68">
+                            </td>
+        					<td>°F</td>
+        				</tr>
+        				<tr>
+        					<td>Diferencia de temperaturas del combustible que sale del dispensario y del combustible del tanque del vehículo</td>
+        					<td>ΔT</td>
+        					<td class="div-cell" >
+                                <span id="dsvd-spn-dft" >9</span>
+                                <input type="text" id="dsvd-inp-dft" name="dsvd-inp-dft" class="hide-div" value="9">
+                            </td>
+        					<td>°F</td>
+        				</tr>
+        				<tr>
+        					<td>Presión de Vapor Reid (psia)</td>
+        					<td>RPV</td>
+        					<td class="div-cell" >
+                                <span id="dsvd-spn-pvr" >4</span>
+                                <input type="text" id="dsvd-inp-pvr" name="dsvd-inp-pvr" class="hide-div" value="4">
+                            </td>
+        					<td>PSIA</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE<sub>dp</sub></td>
+        					<td>
+                                <span id="dsvd-spn-fea" >103.6985</span>
+                            </td>
+        					<td>mg/litro</td>
+        				</tr>
+        				<tr>
+        					<td>Factore de conversión de mg a ton</td>
+        					<td>FC</td>
+        					<td>1/1000000</td>
+        					<td>ton/m³</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión</td>
+        					<td>FE<sub>dp</sub></td>
+        					<td>
+                                <span id="dsvd-spn-fem" >0.0001036985</span>
+                            </td>
+        					<td>ton/m3</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+                       <!-- Pérdidas por Respiración de Tanques Subterráneos (Alivio de tanques) -->
+        	<!-- Repostaje vehicular -->
+        	<div class="section-annotation" data-reveal>
+        			<h2 class="annotation-title">Alivio de tanques</h2>
+        			<p class="annotation-desc" >Emisiones de compuestos orgánicos volátiles procedentes del almacenamiento de líquidos derivados del petróleo en tanques de techo fijo</p>
+        	 </div>
+
+        	<!-- Ficha bibliográfica 1  -->
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Emisiones de compuestos orgánicos volátiles procedentes del almacenamiento de líquidos derivados del petróleo en tanques de techo fijo</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">Control of volatile organi emissions from storage of petroleum liquids in fixed-roof tanks</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>U.S. Environmental Protection Agency (.gov), Seabreeze Boulevard, Sunset Cove, FL 33139</td>
+        				</tr>
+        				<tr>
+        					<td>Área responsable</td>
+        					<td>Office of air and waste management</td>
+        				</tr>
+        				<tr>
+        					<td>Nombre del documento</td>
+        					<td>EPA-450/2-77-036 [December 1977]  OAQPS No. 1.2-089  Guidline series</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<!-- Ficha bibliográfica 1  -->
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Manuales del Programa de Inventarios de emisiones de México, Volumen V</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">Desarrollo de inventarios de emisiones de fuentes de área</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>Radian International LLC 10389 Old Placerville Road Sacramento, CA 95827</td>
+        				</tr>
+        				<tr>
+        					<td>Secciòn</td>
+        					<td>7.1 Distribución de Gasolina</td>
+        				</tr>
+        				<tr>
+        					<td>Nota</td>
+        					<td>Tabla 7.1-2 Propiedades (PMV y PVA) de Derivados de Petróleo Líquidos Selectos</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<div class="info-blueprint" data-reveal>
+        		<div class="dim-callout">Manuales del Programa de Inventarios de emisiones de México, Volumen V</div>
+        		<table class="info-table">
+        			<thead>
+        				<tr>
+        					<th colspan="2">tesis: tecnologías disponibles para el control de emisiones de COV</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Elaborado</td>
+        					<td>Ing. Víctor Uriel Urieta Pérez</td>
+        				</tr>
+        				<tr>
+        					<td>Título</td>
+        					<td>Tesis: Tecnologías disponibles para el control de emisiones de compuestos orgánicos volátiles (2015) (Página 25)</td>
+        				</tr>
+        				<tr>
+        					<td>Institución</td>
+        					<td>Universidad Nacional Autónoma De México - Facultad de Química</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<!-- ===== Valores base para el factor de emisión ===== -->
+        	<div class="revision-block" data-reveal>
+        		<div class="dim-callout">factor de emisiòn de la gasolina</div>
+        		<table class="revision-table">
+        			<thead>
+        				<tr>
+        					<th>Variable</th>
+        					<th>Abreviatura</th>
+        					<th style="width: 10rem;" >
+                                Valor
+                                <div class="mnu-lst-icn">
+                                    <div class="mnu-icn" id="altg-icn-edt" onclick="showEditALT('altg')" >
+                                        <input id="altg-txt-edt" name="mnu-txt-edt" type="hidden" value="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="altg-svg-edt" ><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                    </div>
+                                    <div class="mnu-icn altg-icn-sve" id="altg-icn-sve" onclick="saveEditALT('altg')" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="altg-svg-sve" ><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                    </div>
+                                </div>
+                            </th>
+        					<th>Unidad</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Factor de emisión para la respiración del tanque (kg/m³) </td>
+        					<td>Fe</td>
+        					<td class="div-cell" >
+                                <span id="altg-spn-fer" >0.12</span>
+                                <input type="text" id="altg-inp-fer" name="altg-inp-fer" class="hide-div" value="0.12">
+                            </td>
+        					<td>kg/m³</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión para la respiración del tanque (ton/m³)</td>
+        					<td>Fe</td>
+        					<td>
+                                <span id="altg-spn-frt" >0.00012</span>
+                            </td>
+        					<td>ton/m³</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        	<div class="revision-block" data-reveal>
+        		<div class="dim-callout">factor de emisiòn del diésel</div>
+        		<table class="revision-table">
+        			<thead>
+        				<tr>
+        					<th>Variable</th>
+        					<th>Abreviatura</th>
+        					<th style="width: 10rem;" >
+                                Valor
+                                <div class="mnu-lst-icn">
+                                    <div class="mnu-icn" id="altd-icn-edt" onclick="showEditALT('altd')" >
+                                        <input id="altd-txt-edt" name="mnu-txt-edt" type="hidden" value="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="altd-svg-edt" ><title>Editar porcentajes</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M15.2869 3.15178L14.3601 4.07866L5.83882 12.5999L5.83881 12.5999C5.26166 13.1771 4.97308 13.4656 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.32181 19.8021L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L4.19792 21.6782L7.47918 20.5844L7.47919 20.5844C8.25353 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5344 19.0269 10.8229 18.7383 11.4001 18.1612L11.4001 18.1612L19.9213 9.63993L20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178Z"/><path d="M14.36 4.07812C14.36 4.07812 14.4759 6.04774 16.2138 7.78564C17.9517 9.52354 19.9213 9.6394 19.9213 9.6394M4.19789 21.6777L2.32178 19.8015" opacity=".5"/></g></svg>
+                                    </div>
+                                    <div class="mnu-icn altd-icn-sve" id="altd-icn-sve" onclick="saveEditALT('altd')" >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="altd-svg-sve" ><title>Guardar cambios</title><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 6.25a2.5 2.5 0 0 1 2.5-2.5h10.1a2 2 0 0 1 1.4.6l2.3 2.3a2 2 0 0 1 .6 1.4v9.7a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M7.75 20.25v-4.5a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v4.5m-8-16.5v3a1 1 0 0 0 1 1h4.5a1 1 0 0 0 1-1v-3"/></g></svg>
+                                    </div>
+                                </div>
+                            </th>
+        					<th>Unidad</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>Factor de emisión para la respiración del tanque (kg/m³) </td>
+        					<td>Fe</td>
+        					<td class="div-cell" >
+                                <span id="altd-spn-fer" >0.05297</span>
+                                <input type="text" id="altd-inp-fer" name="altd-inp-fer" class="hide-div" value="0.05297">
+                            </td>
+        					<td>kg/m³</td>
+        				</tr>
+        				<tr>
+        					<td>Factor de emisión para la respiración del tanque (ton/m³)</td>
+        					<td>Fe</td>
+        					<td>
+                                <span></span>
+                                <span id="altd-spn-frt" >0.00005297</span>
+                            </td>
+        					<td>ton/m³</td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</div>
+
+        </section>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script>
+        /*Factores de emisión */
+        var lstFEGsl = [0.00120426855266667, 0.00109817372, 0.00012];  //Dsp, Dsv, Alt
+        var lstFEDsl = [0.00000000192267, 0.0001036985, 0.00005297];   //Dsp, Dsv, Alt
+
+        /*Total de combustibles en metros cúbicos */
+        var vvCombs  = [0.0, 0.0, 0.0];   //Dsp, Dsv, Alt
+
+        /*Emisiones totales de las actividades de recepción, almacenamiento y venta de combustibles, con y sin equipos de control*/
+        var emssTtl  = [0.0, 0.0, 0.0];   //Mgn, Prm, Dsl
+        var emscTtl  = [0.0, 0.0, 0.0];   //Mgn, Prm, Dsl
+
+        /* Porcentaje de eficiencia de los equipos de control */
+        var efic     = [0.0, 0.0, 0.0];   //Dsp, Dsv, Alt
+        /* Porcentaje de sustancias RETC en combustibles */
+        var sustMgn = [1.16, 6.83, 7.36, 2.06, 0.36];
+        var sustPrm = [1.54, 6.86, 7.67, 2.27, 0.36];
+        var sustDsl = [2.40, 1.40, 0.00, 4.70, 0.00];
+
+        /*Parámetros de cálculo para las formulas de los factores de emisión */
+        var forFeDspGas = [1, 6.6, 66, 540];
+        var forFeDsvGas = [59, 59, 0, 10];
+        var forFeAltGas = [0.12, 0.00012];
+        var forFeDspDsl = [1, 0.004, 170, 528];
+        var forFeDsvDsl = [59, 68, 9, 4];
+        var forFeAltDsl = [0.05297, 0.00005297];
+
+
+
+        const txtInpts = document.querySelectorAll('.div-cell input');
+        txtInpts.forEach( txtInp => {
+            txtInp.addEventListener('blur', (event) => {
+                let str = txtInp.value;
+                let num = str.replace(/[^0-9.]/g, "");
+                let tmp = txtInp.id;
+                let spn = tmp.replace( "-inp-", "-spn-" )
+                let vlr = document.getElementById(spn).innerText;
+
+                if( isValidNumber( num ) ){
+                    let aux = parseFloat(num);
+                    txtInp.value = numberWithCommas(aux);
+                }
+                else{
+                    txtInp.value = vlr;
+                }
+            });
+        });
+
+
+        window.addEventListener("load", (event) => {
+            inicVlrsArrays();
+        });
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            let tmp = '';  let mtr = '';
+            let i = 0;
+
+            //"sustMgn";  "sustPrm";  "sustDsl";
+            let mtrx = [0.0, 0.0, 0.0, 0.0, 0.0];
+            tmp = localStorage.getItem('sustMgn');
+            if (typeof tmp !== 'undefined' && tmp !== null && tmp !== "" ){
+                mtrx = JSON.parse(tmp);
+                i = 0;
+                mtrx.forEach( vlr => { sustMgn[i] = vlr; i++; } );
+                updateSustLabels("Mgn");
+            }
+
+            mtrx = [0.0, 0.0, 0.0, 0.0, 0.0];
+            tmp = localStorage.getItem('sustPrm');
+            if (typeof tmp !== 'undefined' && tmp !== null && tmp !== "" ){
+                mtrx = JSON.parse(tmp);
+                i = 0;
+                mtrx.forEach( vlr => { sustPrm[i] = vlr; i++; } );
+                updateSustLabels("Prm");
+            }
+
+            mtrx = [0.0, 0.0, 0.0, 0.0, 0.0];
+            tmp = localStorage.getItem('sustDsl');
+            if (typeof tmp !== 'undefined' && tmp !== null && tmp !== "" ){
+                mtrx = JSON.parse(tmp);
+                i = 0;
+                mtrx.forEach( vlr => { sustDsl[i] = vlr; i++; } );
+                updateSustLabels("Dsl");
+            }
+
+
+        });
+
+        /* Funciones para la impresión del reporte */
+        function generarReporte(){
+            /*configurar_reporte();*/
+            // Displays an alert after half second
+            setTimeout(() => {
+                reporteHTMLtoPrint();
+            }, 300);
+
+        }
+
+        function reporteHTMLtoPrint(){
+            var mywindow = window.open('', '_blank');
+
+            mywindow.document.write('<html><head>');
+            mywindow.document.write('<title>Reporte</title>');
+
+            mywindow.document.write('<link rel="preconnect" href="https://fonts.googleapis.com">');
+            mywindow.document.write('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
+            mywindow.document.write('<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">');
+            mywindow.document.write('<link rel="icon" href="favicon.ico" type="image/x-icon" />');
+            mywindow.document.write('<link rel="stylesheet" href="./css/reporte.css">');
+
+            mywindow.document.write('<style type="text/css" media="print">');
+            mywindow.document.write('@media print {  body { print-color-adjust: exact; -webkit-print-color-adjust: exact;  }  }');
+            mywindow.document.write('@page { size:A4 portrait; margin-left: 2cm; margin-right: 2cm; margin-top: 3cm; margin-bottom: 3cm; webkit-print-color-adjust: exact; }');
+            mywindow.document.write('</style>');
+
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(document.getElementById('Superior').innerHTML);
+            mywindow.document.write('</body></html>');
+        }
+
+    </script>
+</body>
+</html>
